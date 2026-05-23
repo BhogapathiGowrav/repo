@@ -106,3 +106,66 @@ pipeline {
    }
  }
 }
+
+
+
+
+L8
+package operations_add_sub;
+
+public class AddTwoNumber {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int b, int c) {
+        return b - c;
+    }
+
+    public static void main(String[] args) {
+
+        AddTwoNumber calc = new AddTwoNumber();
+
+        int result1 = calc.add(2, 3);
+        int result2 = calc.subtract(2, 3);
+
+        System.out.println("Result: " + result1);
+        System.out.println("Result: " + result2);
+    }
+}
+
+
+
+package operations_add_sub;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class AddTwoNumberTest {
+
+    @Test
+    void testAdd() {
+
+        AddTwoNumber calc = new AddTwoNumber();
+
+        int result = calc.add(2, 3);
+
+        assertEquals(5, result,
+                "Addition should return 5");
+    }
+
+    @Test
+    void testSubtract() {
+
+        AddTwoNumber calc = new AddTwoNumber();
+
+        int result = calc.subtract(2, 3);
+
+        assertEquals(-1, result,
+                "Subtraction should return -1");
+    }
+}
+
+
+
